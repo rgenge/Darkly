@@ -11,7 +11,7 @@ Traversal Path using dirbuster, wfuzz and manually after not finding anything wi
 ```
 2. Later on we keep trying it until we get a different message, so we trye /etc/passswd and there is the flag! 
 ```
- 5 UNION SELECT TABLE_NAME,NULL FROM information_schema.tables--
+SERVER_URL/?page=../../../../../../etc/passwd
 ```
 ### How to protect it
 Use permission control to avoid outside people from getting the file

@@ -29,3 +29,8 @@ Since we are not allowed to use automated tools like sqlmap.
 ```
  5 union SELECT username,password FROM Member_Brute_Force.db_default
 ```
+### How to protect
+ - use ORM system
+ - Input Validation like restricting input size, and if the data is a name it doesnt have to contain numbers  and if the data is a number we could block string from it.
+ - Sanitize user input by checking some chars in the input and exchanging it so the SQL doesn't interpeter these.
+### How to solve it

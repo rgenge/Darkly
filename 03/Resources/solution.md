@@ -1,4 +1,4 @@
-# Traversal Path 
+# Traversal Path
 
 ### Tools
 Traversal Path using dirbuster, wfuzz and manually after not finding anything with automated tools.
@@ -9,9 +9,9 @@ Traversal Path using dirbuster, wfuzz and manually after not finding anything wi
 ```
  SERVER_URL/?page=../
 ```
-2. Later on we keep trying it until we get a different message, so we trye /etc/passswd and there is the flag! 
+2. Later on we keep trying it until we get a different message, so we trye /etc/passswd and there is the flag!
 ```
-SERVER_URL/?page=../../../../../../etc/passwd
+SERVER_URL/?page=../../../../../../../etc/passwd
 ```
 ### How to protect it
 Use permission control to avoid outside people from getting the file

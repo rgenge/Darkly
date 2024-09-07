@@ -25,9 +25,11 @@ When considering using the user agent string to detect which browser is being us
 Are you trying to work around a specific bug in some version of a browser?
 
     Look, or ask, in specialized forums: you're unlikely to be the first to hit this problem. Also, experts, or people with another point of view, can give you ideas for working around the bug. If the problem seems uncommon, it's worth checking if this bug has been reported to the browser vendor via their bug tracking system (Mozilla; WebKit; Blink; Opera). Browser makers do pay attention to bug reports, and the analysis may hint about other workarounds for the bug.
+
 Are you trying to check for the existence of a specific feature?
 
     Your site needs to use a specific Web feature that some browsers don't yet support, and you want to send those users to an older website with fewer features but that you know will work. This is the worst reason to use user agent detection because odds are eventually all the other browsers will catch up. In addition, it is not practical to test every one of the less popular browsers and test for those Web features. You should never do user agent sniffing. There is always the alternative of doing feature detection instead.
+
 Do you want to provide different HTML depending on which browser is being used?
 
     This is usually a bad practice, but there are some cases in which this is necessary. In these cases, you should first analyze your situation to be sure it's really necessary. Can you prevent it by adding some non-semantic <div> or <span> elements? The difficulty of successfully using user agent detection is worth a few disruptions to the purity of your HTML. Also, rethink your design: can you use progressive enhancement or fluid layouts to help remove the need to do this?

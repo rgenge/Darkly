@@ -15,7 +15,9 @@ SERVER_URL/?page=../../../../../../../etc/passwd
 ```
 ### How to protect it
 Use permission control to avoid outside people from getting the file
-Validade the user permission if possible
+Validate the user permission if possible
 Use most recent web server version, this is an old problem that web server are getting better to fight against it
 Use non super user to run the server, so if it is accessed they can't modify the folders
 Encrypt and use passwords for more important data
+Disable "allow_url_open" and "allow_url_include"
+Apply filter on variable "page" for special characters like '.', '/', '%'

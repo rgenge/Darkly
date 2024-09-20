@@ -3,7 +3,7 @@
 
 01 - SQL Injection Members Area
 
-02 - SQL Injection Members Area
+02 - SQL Injection Members  and Sign in with user/password found on Member page.
 
 03 - Traversal Path
 

